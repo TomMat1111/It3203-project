@@ -1,0 +1,104 @@
+/* IT 3203 Project Milestone 1 - Thomas Atalla */
+/* Simple Business Style - Clean and Professional */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+header {
+    background-color: #003366;
+    /* Deep Business Blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Consistent Main Menu */
+nav {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    /* Gold Accent */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+/* Table Requirement */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+/* Required Footer Note */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+/* Image Styling for Milestone 1 */
+.img-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+img {
+    max-width: 100%; /* Ensures the image fits on the screen */
+    height: auto;
+    border-radius: 4px;
+}
