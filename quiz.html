@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Assessment | Milestone 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HTTP Self-Assessment</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="versions.html">Versions</a></li>
+            <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="quiz.html" class="active">Self-Assessment</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Test Your Knowledge</h2>
+            <p>Assess your understanding of HTTP concepts before moving to Milestone 3.</p>
+        </section>
+
+        <form id="quiz-form">
+            <div class="question-card">
+                <h3>1. Architecture</h3>
+                <p>HTTP is a <strong>_________</strong> protocol because the server does not store data between requests.</p>
+                <input type="text" id="q1" placeholder="Type answer here..." required>
+                <div id="feedback-q1" class="feedback"></div>
+            </div>
+
+            <div class="question-card">
+                <h3>2. Status Codes</h3>
+                <p>Which status code represents a successful "OK" response?</p>
+                <label><input type="radio" name="q2" value="200"> 200</label><br>
+                <label><input type="radio" name="q2" value="404"> 404</label><br>
+                <label><input type="radio" name="q2" value="500"> 500</label>
+                <div id="feedback-q2" class="feedback"></div>
+            </div>
+
+            <div class="question-card">
+                <h3>3. Security</h3>
+                <p>What is the default port for secure HTTPS traffic?</p>
+                <label><input type="radio" name="q3" value="80"> 80</label><br>
+                <label><input type="radio" name="q3" value="443"> 443</label><br>
+                <label><input type="radio" name="q3" value="21"> 21</label>
+                <div id="feedback-q3" class="feedback"></div>
+            </div>
+
+            <div class="question-card">
+                <h3>4. HTTP Methods</h3>
+                <p>Which method is used to retrieve data from a server?</p>
+                <label><input type="radio" name="q4" value="POST"> POST</label><br>
+                <label><input type="radio" name="q4" value="GET"> GET</label><br>
+                <label><input type="radio" name="q4" value="DELETE"> DELETE</label>
+                <div id="feedback-q4" class="feedback"></div>
+            </div>
+
+            <div class="question-card">
+                <h3>5. Components</h3>
+                <p>Select the parts included in an HTTP Request: (Select all that apply)</p>
+                <label><input type="checkbox" name="q5" value="method"> Request Method</label><br>
+                <label><input type="checkbox" name="q5" value="url"> URL Path</label><br>
+                <label><input type="checkbox" name="q5" value="kernel"> Kernel Memory</label>
+                <div id="feedback-q5" class="feedback"></div>
+            </div>
+
+            <div class="controls">
+                <button type="button" onclick="calculateScore()">Submit Quiz</button>
+                <button type="reset" onclick="resetQuiz()">Reset Quiz</button>
+            </div>
+        </form>
+
+        <div id="result-display" class="hidden">
+            <hr>
+            <h2 id="final-status"></h2>
+            <h3 id="final-score"></h3>
+        </div>
+    </main>
+
+    <footer>
+        <p>Thomas Atalla | IT 3203 Milestone 2</p>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

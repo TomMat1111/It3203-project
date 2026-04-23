@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTTP Deep Dive | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <h1>A Technical Deep Dive of HTTP</h1>
     </header>
+
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="versions.html">Versions</a></li>
             <li><a href="concepts.html">Key Concepts</a></li>
+            <li><a href="quiz.html">Self-Assessment</a></li> 
             <li><a href="about.html">About</a></li>
             <li><a href="references.html">References</a></li>
         </ul>
     </nav>
-    <main>
-        <h2>Project Abstract</h2>
-        <p>This project explores the evolution of the Hypertext Transfer Protocol. Based on research from IT 3203, this
-            site documents the transition from HTTP/0.9 to the modern, high-speed HTTP/3 protocol.</p>
 
-        <h2>Table of Contents</h2>
-        <ol>
-            <li><strong>History:</strong> The CERN era and Tim Berners-Lee.</li>
-            <li><strong>Versions:</strong> Technical differences in protocol speed.</li>
-            <li><strong>Concepts:</strong> Deep dive into 6 core networking terms.</li>
-            <li><strong>About:</strong> Background on the developer.</li>
-            <li><strong>References:</strong> IETF and MDN sources.</li>
-        </ol>
+    <main>
+        <section>
+            <h2>Project Abstract</h2>
+            <p>This project explores the evolution of the Hypertext Transfer Protocol. Based on research from IT 3203, this site documents the transition from HTTP/0.9 to the modern, high-speed HTTP/3 protocol.</p>
+        </section>
+
+        <section>
+            <h2>Technical Protocol Comparison</h2>
+            <p>A key finding in this research is the transition from text-based protocols to binary-framed protocols for increased efficiency.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>HTTP/1.1</th>
+                        <th>HTTP/2</th>
+                        <th>HTTP/3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Transport Layer</td>
+                        <td>TCP</td>
+                        <td>TCP</td>
+                        <td>QUIC (UDP)</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplexing</td>
+                        <td>None</td>
+                        <td>Fully Multiplexed</td>
+                        <td>Improved (No HOL Blocking)</td>
+                    </tr>
+                    <tr>
+                        <td>Encryption</td>
+                        <td>Optional (TLS)</td>
+                        <td>Required (Implicit)</td>
+                        <td>Built-in</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <div class="img-container">
             <img src="protocol.jpg" alt="Technical diagram of HTTP request and response">
             <p><em>Figure 1: Visualizing the HTTP communication cycle.</em></p>
         </div>
     </main>
+
     <footer>
-        <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203</a>.</p>
+        <p>Thomas Atalla | IT 3203 Milestone 2 | <a href="https://ksuweb.github.io/IT3203/">IT 3203 Homepage</a></p>
     </footer>
 </body>
-
 </html>

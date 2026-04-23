@@ -1,104 +1,94 @@
-/* IT 3203 Project Milestone 1 - Thomas Atalla */
-/* Simple Business Style - Clean and Professional */
+/* Thomas Atalla | IT 3203 Milestone 2 Optimized CSS */
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
-    color: #333;
     background-color: #f4f7f6;
+    color: #333;
+}
+
+header, footer {
+    text-align: center;
+    padding: 30px 0;
 }
 
 header {
-    background-color: #003366;
-    /* Deep Business Blue */
+    background-color: #003366; /* Business Blue */
     color: white;
-    padding: 20px 0;
-    text-align: center;
 }
 
-/* Consistent Main Menu */
 nav {
     background-color: #222;
     padding: 10px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav ul li { display: inline; margin: 0 15px; }
 
 nav ul li a {
-    color: #ffcc00;
-    /* Gold Accent */
+    color: #ffcc00; /* Gold accent */
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* Active State for Navigation */
+nav ul li a.active {
+    color: #fff;
+    background-color: #003366;
+    border-radius: 4px;
 }
 
 main {
-    max-width: 900px;
+    max-width: 950px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 40px;
     background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
-h2 {
-    color: #003366;
-    border-bottom: 2px solid #ffcc00;
-    padding-bottom: 5px;
-}
-
-/* Table Requirement */
+/* Enhanced Content Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
 
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left;
-}
+th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+th { background-color: #003366; color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; }
 
-th {
-    background-color: #eee;
-}
-
-/* Required Footer Note */
-footer {
-    text-align: center;
+/* Quiz Styling */
+.question-card {
+    border: 1px solid #ddd;
     padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.feedback { font-weight: bold; margin-top: 10px; }
+.hidden { display: none; }
+
+.controls button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+button[onclick="calculateScore()"] { background: #003366; }
+button[type="reset"] { background: #777; margin-left: 10px; }
+
+footer {
     font-size: 0.85rem;
     color: #666;
     border-top: 1px solid #ddd;
-    margin-top: 20px;
-}
-/* Image Styling for Milestone 1 */
-.img-container {
-    text-align: center;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-}
-
-img {
-    max-width: 100%; /* Ensures the image fits on the screen */
-    height: auto;
-    border-radius: 4px;
+    margin-top: 40px;
 }
