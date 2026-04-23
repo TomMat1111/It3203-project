@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>HTTP Deep Dive | [Page Name]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core HTTP Concepts & Architecture</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <h1>A Technical Deep Dive of HTTP</h1>
+        <h1>Core HTTP Concepts & Architecture</h1>
     </header>
+
     <nav>
-        <ul>
+        <ul class="flex-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="versions.html">Versions</a></li>
@@ -23,21 +23,28 @@
         </ul>
     </nav>
 
+    <main class="grid-container">
+        <section class="card">
+            <h2>Key Technical Concepts</h2>
+            <p>These terms represent the foundational pillars of the modern web protocol stack.</p>
+            <ul>
+                <li><strong>Latency:</strong> The time delay between a request and a response.</li>
+                <li><strong>Multiplexing:</strong> Sending multiple requests over a single connection simultaneously.</li>
+                <li><strong>QUIC:</strong> A UDP-based transport layer used in HTTP/3.</li>
+                <li><strong>Headers:</strong> Metadata providing context about the request or response.</li>
+                <li><strong>Binary Framing:</strong> Breaking messages into smaller frames for efficiency.</li>
+                <li><strong>Statelessness:</strong> The principle where each request is independent of the previous one.</li>
+            </ul>
+        </section>
+        
+        <aside class="card">
+            <h3>Protocol Efficiency</h3>
+            <p>By implementing <strong>Binary Framing</strong>, HTTP/2 and HTTP/3 significantly reduce the impact of latency on modern web applications.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Thomas Atalla | IT 3203 Milestone 2</p>
+    </footer>
 </body>
-
 </html>
-<main>
-    <h2>Key Technical Concepts</h2>
-    <ul>
-        <li><strong>Latency:</strong> The time delay between a request and a response.</li>
-        <li><strong>Multiplexing:</strong> Sending multiple requests over a single connection.</li>
-        <li><strong>QUIC:</strong> A UDP-based transport layer used in HTTP/3.</li>
-        <li><strong>Headers:</strong> Key-value pairs providing metadata about the request.</li>
-        <li><strong>Binary Framing:</strong> Breaking messages into smaller frames for efficiency.</li>
-        <li><strong>Statefulness:</strong> How protocols track sessions across requests.</li>
-    </ul>
-</main>
-
-<footer>
-    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203</a>.</p>
-</footer>

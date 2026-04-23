@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>HTTP Deep Dive | References</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Protocol Research | References & Resources</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <h1>References & Resources</h1>
+        <h1>Technical References & Resources</h1>
     </header>
-     <nav>
-        <ul>
+
+    <nav>
+        <ul class="flex-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="versions.html">Versions</a></li>
@@ -23,30 +23,45 @@
         </ul>
     </nav>
 
-    <main>
-        <h2>Academic & Technical Sources</h2>
-        <ul>
-            <li><strong>RFC 1945:</strong> Hypertext Transfer Protocol -- HTTP/1.0. <a
-                    href="https://www.ietf.org/rfc/rfc1945.txt" target="_blank">View RFC</a></li>
-            <li><strong>RFC 2616:</strong> Hypertext Transfer Protocol -- HTTP/1.1. <a
-                    href="https://www.ietf.org/rfc/rfc2616.txt" target="_blank">View RFC</a></li>
-            <li><strong>RFC 7540:</strong> Hypertext Transfer Protocol Version 2 (HTTP/2). <a
-                    href="https://www.rfc-editor.org/rfc/rfc7540.html" target="_blank">View RFC</a></li>
-            <li><strong>RFC 9000:</strong> QUIC: A UDP-Based Multiplexed and Secure Transport. <a
-                    href="https://www.rfc-editor.org/rfc/rfc9000.html" target="_blank">View RFC</a></li>
-            <li><strong>High Performance Browser Networking:</strong> Ilya Grigorik (2013). <a href="https://hpbn.co/"
-                    target="_blank">Full Online Version</a></li>
-            <li><strong>MDN Web Docs:</strong> Evolution of HTTP. <a href="https://developer.mozilla.org"
-                    target="_blank">Visit MDN</a></li>
-        </ul>
+    <main class="grid-container">
+        
+        <section class="card">
+            <h2>Academic & Technical Sources</h2>
+            <p>The following official standards and technical documentations provided the foundational data for this deep dive into the HTTP protocol.</p>
+            <ul>
+                <li>
+                    <strong>RFC 1945:</strong> Hypertext Transfer Protocol -- HTTP/1.0. 
+                    <p><em>Significance:</em> Introduced headers and the ability to transmit media beyond plain text. <a href="https://www.ietf.org/rfc/rfc1945.txt" target="_blank">View RFC</a></p>
+                </li>
+                <li>
+                    <strong>RFC 2616:</strong> Hypertext Transfer Protocol -- HTTP/1.1. 
+                    <p><em>Significance:</em> Established persistent connections as the primary web standard. <a href="https://www.ietf.org/rfc/rfc2616.txt" target="_blank">View RFC</a></p>
+                </li>
+                <li>
+                    <strong>RFC 7540:</strong> Hypertext Transfer Protocol Version 2 (HTTP/2). 
+                    <p><em>Significance:</em> Documented the transition to binary framing and multiplexing. <a href="https://www.rfc-editor.org/rfc/rfc7540.html" target="_blank">View RFC</a></p>
+                </li>
+                <li>
+                    <strong>RFC 9000:</strong> QUIC: A UDP-Based Secure Transport. 
+                    <p><em>Significance:</em> The foundational transport layer for HTTP/3, reducing latency in mobile environments. <a href="https://www.rfc-editor.org/rfc/rfc9000.html" target="_blank">View RFC</a></p>
+                </li>
+                <li>
+                    <strong>MDN Web Docs:</strong> The Evolution of HTTP. 
+                    <p><em>Significance:</em> Comprehensive historical overview provided by the Mozilla Developer Network. <a href="https://developer.mozilla.org" target="_blank">Visit MDN</a></p>
+                </li>
+            </ul>
+        </section>
 
-        <h3>Additional Learning</h3>
-        <p>For more information on web development and protocols, visit the <a href="https://www.w3.org/"
-                target="_blank">W3C Official Site</a>.</p>
+        <aside class="card toc-sidebar">
+            <h3>Protocol Standard Bodies</h3>
+            <p>For official information regarding the future of web architecture and security standards, visit the official World Wide Web Consortium site.</p>
+            <a href="https://www.w3.org/" target="_blank" class="sidebar-link">Visit W3C Official Site</a>
+        </aside>
+
     </main>
+
     <footer>
-        <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203</a>.</p>
+        <p>Thomas Atalla | IT 3203 Milestone 2 | Kennesaw State University</p>
     </footer>
 </body>
-
 </html>

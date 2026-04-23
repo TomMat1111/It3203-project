@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP Assessment | Milestone 2</title>
+    <title>HTTP Technical Assessment | Milestone 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>HTTP Self-Assessment</h1>
+        <h1>HTTP Self-Assessment Quiz</h1>
     </header>
 
     <nav>
-        <ul>
+        <ul class="flex-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="versions.html">Versions</a></li>
@@ -23,16 +23,16 @@
         </ul>
     </nav>
 
-    <main>
-        <section class="intro">
+    <main class="grid-container">
+        <section class="card abstract">
             <h2>Test Your Knowledge</h2>
-            <p>Assess your understanding of HTTP concepts before moving to Milestone 3.</p>
+            <p>Please answer all five questions below. This quiz evaluates your understanding of HTTP/2, HTTP/3, and protocol architecture.</p>
         </section>
 
-        <form id="quiz-form">
+        <form id="quiz-form" class="card">
             <div class="question-card">
                 <h3>1. Architecture</h3>
-                <p>HTTP is a <strong>_________</strong> protocol because the server does not store data between requests.</p>
+                <p>HTTP is a <strong>_________</strong> protocol because the server does not retain session data between requests.</p>
                 <input type="text" id="q1" placeholder="Type answer here..." required>
                 <div id="feedback-q1" class="feedback"></div>
             </div>
@@ -57,7 +57,7 @@
 
             <div class="question-card">
                 <h3>4. HTTP Methods</h3>
-                <p>Which method is used to retrieve data from a server?</p>
+                <p>Which method is primarily used to retrieve data from a server?</p>
                 <label><input type="radio" name="q4" value="POST"> POST</label><br>
                 <label><input type="radio" name="q4" value="GET"> GET</label><br>
                 <label><input type="radio" name="q4" value="DELETE"> DELETE</label>
@@ -65,8 +65,8 @@
             </div>
 
             <div class="question-card">
-                <h3>5. Components</h3>
-                <p>Select the parts included in an HTTP Request: (Select all that apply)</p>
+                <h3>5. Protocol Components</h3>
+                <p>Select the parts typically included in an HTTP <strong>Request</strong>: (Select all that apply)</p>
                 <label><input type="checkbox" name="q5" value="method"> Request Method</label><br>
                 <label><input type="checkbox" name="q5" value="url"> URL Path</label><br>
                 <label><input type="checkbox" name="q5" value="kernel"> Kernel Memory</label>
@@ -79,11 +79,10 @@
             </div>
         </form>
 
-        <div id="result-display" class="hidden">
-            <hr>
+        <section id="result-display" class="hidden card">
             <h2 id="final-status"></h2>
             <h3 id="final-score"></h3>
-        </div>
+        </section>
     </main>
 
     <footer>

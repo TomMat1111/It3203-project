@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP Deep Dive | Home</title>
+    <title>HTTP Protocol Research | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     </header>
 
     <nav>
-        <ul>
+        <ul class="flex-nav">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="versions.html">Versions</a></li>
@@ -23,55 +23,34 @@
         </ul>
     </nav>
 
-    <main>
-        <section>
+    <main class="grid-container">
+        
+        <section class="card">
             <h2>Project Abstract</h2>
-            <p>This project explores the evolution of the Hypertext Transfer Protocol. Based on research from IT 3203, this site documents the transition from HTTP/0.9 to the modern, high-speed HTTP/3 protocol.</p>
+            <p>This project explores the evolution of the Hypertext Transfer Protocol (HTTP). Based on research conducted for IT 3203, this site documents the transition from the original HTTP/0.9 to the modern, high-speed HTTP/3 protocol.</p>
         </section>
 
-        <section>
-            <h2>Technical Protocol Comparison</h2>
-            <p>A key finding in this research is the transition from text-based protocols to binary-framed protocols for increased efficiency.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>HTTP/1.1</th>
-                        <th>HTTP/2</th>
-                        <th>HTTP/3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Transport Layer</td>
-                        <td>TCP</td>
-                        <td>TCP</td>
-                        <td>QUIC (UDP)</td>
-                    </tr>
-                    <tr>
-                        <td>Multiplexing</td>
-                        <td>None</td>
-                        <td>Fully Multiplexed</td>
-                        <td>Improved (No HOL Blocking)</td>
-                    </tr>
-                    <tr>
-                        <td>Encryption</td>
-                        <td>Optional (TLS)</td>
-                        <td>Required (Implicit)</td>
-                        <td>Built-in</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="card">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="history.html">The History of HTTP</a></li>
+                <li><a href="versions.html">Protocol Versions</a></li>
+                <li><a href="concepts.html">Core Networking Concepts</a></li>
+                <li><a href="quiz.html">Interactive Self-Assessment</a></li>
+                <li><a href="about.html">About the Developer</a></li>
+                <li><a href="references.html">References & Resources</a></li>
+            </ol>
         </section>
 
-        <div class="img-container">
-            <img src="protocol.jpg" alt="Technical diagram of HTTP request and response">
+        <section class="card full-width">
+            <img src="protocol.jpg" alt="Technical diagram of HTTP request and response cycle">
             <p><em>Figure 1: Visualizing the HTTP communication cycle.</em></p>
-        </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>Thomas Atalla | IT 3203 Milestone 2 | <a href="https://ksuweb.github.io/IT3203/">IT 3203 Homepage</a></p>
+        <p>Thomas Atalla | IT 3203 Milestone 2 | <a href="https://ksuweb.github.io/IT3203/">Course Resources</a></p>
     </footer>
 </body>
 </html>
