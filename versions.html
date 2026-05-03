@@ -29,27 +29,32 @@
             <h2>Technical Evolution of Speed</h2>
             <p>While HTTP/1.1 was reliable, it suffered from "Head-of-Line Blocking." Your research highlights how HTTP/2 and HTTP/3 solved these issues.</p>
             
-            <table>
+            <table style="width: 100%; border-collapse: collapse;">
                 <thead>
-                    <tr>
-                        <th>Version</th>
-                        <th>Transport Layer</th>
-                        <th>Key Innovation</th>
+                    <tr style="background: #f2f2f2;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Version</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Transport Layer</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Key Innovation</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>HTTP/2</td>
-                        <td>TCP</td>
-                        <td>Multiplexing (Single Connection)</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">HTTP/2</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">TCP</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Multiplexing (Single Connection)</td>
                     </tr>
                     <tr>
-                        <td>HTTP/3</td>
-                        <td>QUIC (UDP)</td>
-                        <td>Reduced Handshake Latency</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">HTTP/3</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">QUIC (UDP)</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Reduced Handshake Latency</td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <section class="card">
+            <h3>Detailed Analysis: Head-of-Line (HOL) Blocking</h3>
+            <p>A primary research finding is the elimination of HOL blocking. In HTTP/1.1, a single large packet loss blocks the entire connection. <strong>HTTP/3</strong> solves this via QUIC’s independent streams, ensuring that a lost packet in one stream doesn't stall others.</p>
         </section>
 
         <section class="card">
@@ -60,7 +65,7 @@
     </main>
 
     <footer>
-        <p>Thomas Atalla | IT 3203 Milestone 2</p>
+        <p>Thomas Atalla | Kennesaw State University | IT 3203 Final Project</p>
     </footer>
 </body>
 </html>

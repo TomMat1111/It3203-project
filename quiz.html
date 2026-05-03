@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP Technical Assessment | Milestone 2</title>
+    <title>HTTP Technical Assessment | Thomas Atalla</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,69 +24,69 @@
     </nav>
 
     <main class="grid-container">
-        <section class="card abstract">
+        <section class="card abstract full-width">
             <h2>Test Your Knowledge</h2>
             <p>Please answer all five questions below. This quiz evaluates your understanding of HTTP/2, HTTP/3, and protocol architecture.</p>
         </section>
 
-        <form id="quiz-form" class="card">
-            <div class="question-card">
+        <form id="quiz-form" class="card full-width" style="max-width: 800px; margin: auto;">
+            <div class="question-card" style="border-left: 5px solid #003366; padding: 20px; margin-bottom: 25px; background: #fafafa; border-radius: 4px;">
                 <h3>1. Architecture</h3>
-                <p>HTTP is a <strong>_________</strong> protocol because the server does not retain session data between requests.</p>
-                <input type="text" id="q1" placeholder="Type answer here..." required>
+                <p>HTTP is a <strong>_________</strong> protocol because the server does not retain user session data between requests.</p>
+                <input type="text" id="q1" placeholder="Type answer here..." style="padding: 10px; width: 100%; max-width: 400px; border: 1px solid #ccc; border-radius: 4px;">
                 <div id="feedback-q1" class="feedback"></div>
             </div>
 
-            <div class="question-card">
+            <div class="question-card" style="border-left: 5px solid #003366; padding: 20px; margin-bottom: 25px; background: #fafafa; border-radius: 4px;">
                 <h3>2. Status Codes</h3>
-                <p>Which status code represents a successful "OK" response?</p>
-                <label><input type="radio" name="q2" value="200"> 200</label><br>
-                <label><input type="radio" name="q2" value="404"> 404</label><br>
-                <label><input type="radio" name="q2" value="500"> 500</label>
+                <p>Which HTTP status code indicates a successful request?</p>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q2" value="200"> 200 OK</label>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q2" value="404"> 404 Not Found</label>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q2" value="500"> 500 Server Error</label>
                 <div id="feedback-q2" class="feedback"></div>
             </div>
 
-            <div class="question-card">
-                <h3>3. Security</h3>
-                <p>What is the default port for secure HTTPS traffic?</p>
-                <label><input type="radio" name="q3" value="80"> 80</label><br>
-                <label><input type="radio" name="q3" value="443"> 443</label><br>
-                <label><input type="radio" name="q3" value="21"> 21</label>
+            <div class="question-card" style="border-left: 5px solid #003366; padding: 20px; margin-bottom: 25px; background: #fafafa; border-radius: 4px;">
+                <h3>3. Default Ports</h3>
+                <p>What is the standard port used for secure HTTPS traffic?</p>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q3" value="80"> 80</label>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q3" value="443"> 443</label>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q3" value="21"> 21</label>
                 <div id="feedback-q3" class="feedback"></div>
             </div>
 
-            <div class="question-card">
-                <h3>4. HTTP Methods</h3>
-                <p>Which method is primarily used to retrieve data from a server?</p>
-                <label><input type="radio" name="q4" value="POST"> POST</label><br>
-                <label><input type="radio" name="q4" value="GET"> GET</label><br>
-                <label><input type="radio" name="q4" value="DELETE"> DELETE</label>
+            <div class="question-card" style="border-left: 5px solid #003366; padding: 20px; margin-bottom: 25px; background: #fafafa; border-radius: 4px;">
+                <h3>4. Request Methods</h3>
+                <p>Which method is primarily used to <strong>retrieve</strong> data from a server?</p>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q4" value="POST"> POST</label>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q4" value="GET"> GET</label>
+                <label style="display: block; margin: 10px 0;"><input type="radio" name="q4" value="DELETE"> DELETE</label>
                 <div id="feedback-q4" class="feedback"></div>
             </div>
 
-            <div class="question-card">
+            <div class="question-card" style="border-left: 5px solid #003366; padding: 20px; margin-bottom: 25px; background: #fafafa; border-radius: 4px;">
                 <h3>5. Protocol Components</h3>
                 <p>Select the parts typically included in an HTTP <strong>Request</strong>: (Select all that apply)</p>
-                <label><input type="checkbox" name="q5" value="method"> Request Method</label><br>
-                <label><input type="checkbox" name="q5" value="url"> URL Path</label><br>
-                <label><input type="checkbox" name="q5" value="kernel"> Kernel Memory</label>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" name="q5" value="method"> Request Method</label>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" name="q5" value="url"> URL Path</label>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" name="q5" value="kernel"> Kernel Memory</label>
                 <div id="feedback-q5" class="feedback"></div>
             </div>
 
-            <div class="controls">
-                <button type="button" onclick="calculateScore()">Submit Quiz</button>
-                <button type="reset" onclick="resetQuiz()">Reset Quiz</button>
+            <div class="controls" style="display: flex; gap: 15px; justify-content: center; padding-top: 20px;">
+                <button type="button" onclick="calculateScore()" style="padding: 12px 24px; background: #003366; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Submit Quiz</button>
+                <button type="reset" onclick="resetQuiz()" style="padding: 12px 24px; background: #ccc; color: #333; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Reset Quiz</button>
             </div>
         </form>
 
-        <section id="result-display" class="hidden card">
+        <section id="result-display" class="card full-width" style="display: none; margin-top: 30px; text-align: center;">
             <h2 id="final-status"></h2>
             <h3 id="final-score"></h3>
         </section>
     </main>
 
     <footer>
-        <p>Thomas Atalla | IT 3203 Milestone 2</p>
+        <p>Thomas Atalla | Kennesaw State University | IT 3203 Final Project</p>
     </footer>
 
     <script src="quiz.js"></script>

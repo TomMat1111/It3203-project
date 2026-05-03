@@ -41,10 +41,38 @@
             <h3>Protocol Efficiency</h3>
             <p>By implementing <strong>Binary Framing</strong>, HTTP/2 and HTTP/3 significantly reduce the impact of latency on modern web applications.</p>
         </aside>
+
+        <section class="card full-width">
+            <h2>Detailed Research: Handshake Latency Comparison</h2>
+            <p>One of the most significant evolutions in HTTP is the reduction of handshakes required to establish a secure connection.</p>
+            <div style="width: 100%; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                    <thead>
+                        <tr style="background: #003366; color: white;">
+                            <th style="padding: 12px; border: 1px solid #ddd;">Protocol Version</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;">Connection Mechanism</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;">Research Conclusion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">HTTP/1.1 & 2 (TCP)</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">3-Way TCP Handshake</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Creates high initial latency on mobile networks.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">HTTP/3 (QUIC)</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">0-RTT Handshake</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Allows data to flow immediately, reducing load times.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>Thomas Atalla | IT 3203 Milestone 2</p>
+        <p>Thomas Atalla | Kennesaw State University | IT 3203 Final Project</p>
     </footer>
 </body>
 </html>

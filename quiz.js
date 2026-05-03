@@ -1,4 +1,8 @@
-/* Thomas Atalla | IT 3203 Milestone 2 Quiz Logic */
+/* IT 3203 Final Project - Thomas Atalla
+   Documentation: This script handles the interactive quiz logic. 
+   It validates text, radio, and checkbox inputs and provides instant feedback 
+   to the user based on research conducted for the HTTP project.
+*/
 
 const solutions = {
     q1: "stateless",
@@ -8,6 +12,9 @@ const solutions = {
     q5: ["method", "url"]
 };
 
+/**
+ * Main function to calculate the score and display feedback
+ */
 function calculateScore() {
     let score = 0;
     const total = 5;
@@ -33,24 +40,27 @@ function calculateScore() {
     if (isQ5Correct) score++;
     updateFeedback('q5', isQ5Correct, "Request Method and URL Path");
 
-    // UI Result Display
+    // UI Result Display logic
     const resArea = document.getElementById('result-display');
     const status = document.getElementById('final-status');
     const scoreText = document.getElementById('final-score');
 
-    resArea.classList.remove('hidden');
+    resArea.style.display = "block"; 
     scoreText.innerText = `Total Score: ${score} / ${total}`;
 
-    // color effective scoring
+    // Scoring feedback colorization
     if (score >= 4) {
         status.innerText = "OVERALL RESULT: PASS";
-        status.style.color = "#27ae60"; // Green for pass
+        status.style.color = "#27ae60"; 
     } else {
         status.innerText = "OVERALL RESULT: FAIL";
-        status.style.color = "#c0392b"; // Red for fail
+        status.style.color = "#c0392b"; 
     }
 }
 
+/**
+ * Helper function to provide specific feedback for each question
+ */
 function updateFeedback(qId, isCorrect, answer) {
     const el = document.getElementById(`feedback-${qId}`);
     el.innerHTML = isCorrect ? 
@@ -58,8 +68,10 @@ function updateFeedback(qId, isCorrect, answer) {
         `<span style="color: #c0392b;">Incorrect. The answer is: ${answer}</span>`;
 }
 
+/**
+ * Resets the quiz UI and clears previous feedback
+ */
 function resetQuiz() {
-    // Hide the results and clear individual feedback
-    document.getElementById('result-display').classList.add('hidden');
-    document.querySelectorAll('.feedback').forEach(f => f.innerHTML = "");
+    document.getElementById('result-display').style.display = "none";
+    document.querySelectorAll('.feedback').forEach(el => el.innerHTML = "");
 }

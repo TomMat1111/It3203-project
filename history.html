@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP History | CERN to 1.1</title>
+    <title>HTTP History | Technical Evolution | Thomas Atalla</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,22 +25,35 @@
 
     <main class="grid-container">
         <section class="card">
-            <h2>The CERN Era (1989-1991)</h2>
-            <p>In 1989, Tim Berners-Lee envisioned the World Wide Web as an open platform. He designed HTTP to allow for global information sharing among scientists at CERN.</p>
+            <h2>The CERN Era & HTTP/0.9 (1989-1991)</h2>
+            <p>In 1989, Tim Berners-Lee envisioned the World Wide Web as an open platform for scientists at CERN. The original version, <strong>HTTP/0.9</strong>, was a simple "One-Line" protocol. It only supported the <code>GET</code> method and could only return HTML files. There were no headers and no status codes—if a request failed, the server simply sent an HTML file containing the error description.</p>
+        </section>
+
+        <aside class="card">
+            <h3>Did You Know?</h3>
+            <p>The first web server ever used was a NeXT Computer at CERN. The protocol was designed to be "stateless" so that scientists could share documents without the server needing to maintain a constant, resource-heavy connection for every user.</p>
+        </aside>
+
+        <section class="card full-width">
+            <h2>The Standardized Era: HTTP/1.0 and 1.1</h2>
+            <p>As the web grew, the protocol needed more than just text retrieval. <strong>HTTP/1.0 (1996)</strong> introduced the concept of <strong>Headers</strong>, which allowed servers to send metadata like <code>Content-Type</code>, enabling the transmission of images, scripts, and stylesheets for the first time.</p>
+            
+            <p>However, HTTP/1.0 had a major flaw: it closed the connection after every single request. <strong>HTTP/1.1 (1997)</strong> solved this with <strong>Persistent Connections</strong> (Keep-Alive), allowing multiple files to be sent over a single connection, which dramatically improved loading speeds for complex websites.</p>
         </section>
 
         <section class="card">
-            <h2>Key Milestones</h2>
-            <ul>
-                <li><strong>1990:</strong> First server (CERN httpd) created.</li>
-                <li><strong>1996:</strong> HTTP/1.0 introduces headers.</li>
-                <li><strong>1997:</strong> HTTP/1.1 becomes the web standard.</li>
-            </ul>
+            <h2>The Performance Crisis (2010-Present)</h2>
+            <p>By 2010, the sheer volume of web traffic exposed the limitations of HTTP/1.1's sequential nature. Google began researching <strong>SPDY</strong>, which eventually became the foundation for <strong>HTTP/2 (2015)</strong>. This marked the shift from plain-text communication to <strong>Binary Framing</strong>, allowing for multiplexing and reducing the "Head-of-Line Blocking" issues that had plagued the web for over a decade.</p>
+        </section>
+
+        <section class="card">
+            <h2>Research Milestone: The Move to UDP</h2>
+            <p>The most recent historical shift is the transition from TCP to UDP with <strong>HTTP/3 (2022)</strong>. Historically, all HTTP traffic relied on TCP's reliable but slow handshake. By utilizing the <strong>QUIC</strong> protocol, HTTP/3 has re-engineered how the web handles data for a mobile-first, high-latency world.</p>
         </section>
     </main>
 
     <footer>
-        <p>Thomas Atalla | IT 3203 Milestone 2</p>
+        <p>Thomas Atalla | Kennesaw State University | IT 3203 Final Project</p>
     </footer>
 </body>
 </html>

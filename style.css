@@ -1,8 +1,9 @@
-/* IT 3203 Milestone 2 - Thomas Atalla 
-   Refactored for CSS Grid and Flexbox Layouts
+/* IT 3203 Final Project - Thomas Atalla
+   Documentation: This stylesheet implements a responsive grid-based layout 
+   using CSS Grid and Flexbox. It includes media queries for mobile-friendliness.
 */
 
-/* --- Base & Reset --- */
+/* --- Base & Global Styles --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -14,11 +15,11 @@ body {
 header, footer {
     text-align: center;
     padding: 40px 20px;
-    background-color: #003366; /* Deep Business Blue */
+    background-color: #003366; /* Consistent brand color */
     color: white;
 }
 
-/* --- Navigation (Flexbox Implementation) --- */
+/* --- Responsive Navigation (Requirement 1c-2) --- */
 nav {
     background-color: #222;
     padding: 15px 0;
@@ -30,36 +31,35 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows menu items to wrap on smaller screens */
 }
 
 .flex-nav li { margin: 0 15px; }
 
 .flex-nav a {
-    color: #ffcc00; /* Gold Accent */
+    color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 10px;
     transition: 0.3s;
 }
 
-.flex-nav a.active {
+.flex-nav a:hover, .flex-nav a.active {
     color: #fff;
     border-bottom: 2px solid #ffcc00;
 }
 
-/* --- Content Layout (CSS Grid Implementation) --- */
+/* --- Layout: CSS Grid (Requirement 1c-1) --- */
 .grid-container {
     display: grid;
     max-width: 1100px;
     margin: 30px auto;
     padding: 20px;
     gap: 20px;
-    /* Two-column layout: Main content and Sidebar */
+    /* Default Desktop: Main content area and a sidebar */
     grid-template-columns: 2fr 1fr;
 }
 
-/* --- Visual Components --- */
 .card {
     background: white;
     padding: 25px;
@@ -69,40 +69,100 @@ nav {
 
 .full-width {
     grid-column: 1 / -1;
-    text-align: center;
 }
 
-/* --- Table Styling --- */
+/* --- Responsive Media & Tables (Requirement 1c-3) --- */
+img {
+    max-width: 100%; /* Prevents images from overflowing container */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Adds scrollbar for tables on small mobile devices */
+    margin-bottom: 20px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
 }
 
 th, td {
-    border: 1px solid #ddd;
     padding: 12px;
+    border: 1px solid #ddd;
     text-align: left;
 }
 
-th { background-color: #003366; color: white; }
-tr:nth-child(even) { background-color: #f9f9f9; }
-
-/* --- Quiz Styling --- */
+/* --- Quiz Page Enhancements (Requirement 1c-4 & Feedback Fix) --- */
 .question-card {
-    border: 1px solid #ddd;
+    margin-bottom: 25px;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 6px;
+    border-left: 5px solid #003366;
     background: #fafafa;
 }
 
-.feedback { font-weight: bold; margin-top: 10px; }
-.hidden { display: none; }
+/* Aligns radio/checkbox options vertically for clarity */
+.question-card label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+}
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00509e;
+}
+
+/* --- Media Queries (Requirement 1a & 1b) --- */
+
+/* Width 1: Tablets and Large Phones (Under 850px) */
+@media (max-width: 850px) {
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stacks everything in one column */
+        margin: 10px;
+    }
+}
+
+/* Width 2: Small Mobile Devices (Under 480px) */
+@media (max-width: 480px) {
+    header, footer {
+        padding: 20px 10px;
+    }
+
+    .flex-nav {
+        flex-direction: column; /* Vertical menu for mobile */
+        text-align: center;
+    }
+
+    .flex-nav li {
+        margin: 8px 0;
+    }
+
+    .controls {
+        flex-direction: column; /* Stacks buttons on top of each other */
     }
 }
